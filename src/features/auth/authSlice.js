@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { loginRequest } from "./services/authApi";
 import { jwtDecode } from "jwt-decode";
-
+import { setError } from "../error/errorSlice";
 const token = localStorage.getItem("token");
 
 let user = null;
@@ -10,14 +10,31 @@ if (token) {
   user = jwtDecode(token);
 }
 
+
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
-  async (credentials, { rejectWithValue }) => {
+  async (credentials, { rejectWithValue, dispatch }) => {
     try {
+
       const response = await loginRequest(credentials);
+
       return response.data;
+
     } catch (error) {
-      return rejectWithValue(error.response?.data);
+
+      const backendError = error.response?.data;
+
+      dispatch(
+        setError({
+          message: backendError?.message,
+          code: backendError?.error_code?.code,
+          status: backendError?.status,
+          view: backendError?.view
+        })
+      );
+
+      return rejectWithValue(backendError);
+
     }
   }
 );

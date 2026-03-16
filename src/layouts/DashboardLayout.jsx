@@ -14,7 +14,7 @@ export default function DashboardLayout() {
 
         <Navbar />
 
-        <main className="p-6 flex-1 overflow-auto">
+        <main className="p-6 flex-1 overflow-auto bg-[#F4F7FE] ">
           <Outlet />
         </main>
 

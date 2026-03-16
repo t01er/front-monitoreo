@@ -31,8 +31,8 @@ export default function AppRoutes() {
               element={<Dashboard />}
             />
             <Route
-              path="/buses"
-              element={<h1>Buses</h1>}
+              path="/devices"
+              element={<h1>devices</h1>}
             />
             <Route
               path="*"
