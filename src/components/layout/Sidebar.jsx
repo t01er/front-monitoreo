@@ -11,12 +11,12 @@ import {
   ChartBarIcon,
   ChevronRightIcon,
 } from "@heroicons/react/24/outline";
-
+import { Settings } from "lucide-react";
 const menu = [
   { name: "Dashboard", path: "/dashboard", icon: HomeIcon },
   { name: "Dispositivo", path: "/devices", icon: DevicePhoneMobileIcon },
-  { name: "Alertas", path: "/alertas", icon: ExclamationTriangleIcon },
-  { name: "Ajustes", path: "/ajustes", icon: ChartBarIcon },
+  { name: "Alertas", path: "/alerts", icon: ExclamationTriangleIcon },
+  { name: "Ajustes", path: "/setting", icon: Settings },
 ];
 
 export default function Sidebar() {

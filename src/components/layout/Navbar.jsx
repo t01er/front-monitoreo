@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
 
-    <header className="h-16 bg-white border-b flex items-center justify-between px-6">
+    <header className="h-16 bg-[#F4F7FE]  flex items-center justify-between px-6">
 
       <h1 className="font-semibold text-lg">
         Panel de Monitoreo
