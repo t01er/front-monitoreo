@@ -2,6 +2,7 @@ import { BellIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import { useDispatch } from "react-redux";
+import ApiKeyConfig from "./ApiKeyConfig";
 export default function Navbar() {
 
   const { signOut } = useAuth();
@@ -38,6 +39,8 @@ export default function Navbar() {
         >
           Salir
         </button>
+      <ApiKeyConfig />
+
 
       </div>
 

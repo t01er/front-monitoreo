@@ -17,6 +17,7 @@ const menu = [
   { name: "Dispositivo", path: "/devices", icon: DevicePhoneMobileIcon },
   { name: "Alertas", path: "/alerts", icon: ExclamationTriangleIcon },
   { name: "Ajustes", path: "/setting", icon: Settings },
+  { name: "Técnico", path: "/technical", icon: ChartBarIcon }
 ];
 
 export default function Sidebar() {

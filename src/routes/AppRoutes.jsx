@@ -10,6 +10,7 @@ import Devices from "../features/devices/pages/device";
 import Alerts from "../features/alerts/page/alerts";
 import Setting from "../features/settings/page/Settings";
 import PublicRoute from "./PublicRoute";
+import Technical from "../features/technical/page/Technical";
 
 export default function AppRoutes() {
   return (
@@ -27,6 +28,7 @@ export default function AppRoutes() {
             <Route path="/devices" element={<Devices />} />
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/setting" element={<Setting />} />
+            <Route path="/technical" element={<Technical />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Route>

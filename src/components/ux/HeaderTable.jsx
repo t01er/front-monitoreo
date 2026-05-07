@@ -1,6 +1,5 @@
 import { Input } from "@heroui/react";
 import { MagnifyingGlassIcon, ExclamationTriangleIcon ,DevicePhoneMobileIcon} from "@heroicons/react/24/outline";
-
 export default function HeaderTable({ title, subtitle }) {
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
@@ -26,6 +25,7 @@ export default function HeaderTable({ title, subtitle }) {
         }
         variant="flat"
       />
+
     </div>
   );
 }
